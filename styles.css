@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+/* Hero Section */
 .hero {
     background: linear-gradient(to right, #00416A, #E4E5E6);
     color: white;
@@ -16,6 +18,7 @@ body {
     text-align: center;
 }
 
+/* Theme Toggle Button */
 #theme-toggle {
     margin-top: 10px;
     padding: 10px 20px;
@@ -30,6 +33,7 @@ body {
     background: #e74c3c;
 }
 
+/* Navigation */
 nav {
     background: #222;
     padding: 15px 0;
@@ -57,6 +61,7 @@ nav ul li a:hover {
     color: #00a8e8;
 }
 
+/* Section Styling */
 section {
     padding: 60px 20px;
     background: #1e1e1e;
@@ -74,6 +79,7 @@ section.visible {
     transform: translateY(0);
 }
 
+/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -88,6 +94,7 @@ section.visible {
     font-size: 1.2em;
 }
 
+/* Footer */
 footer {
     background-color: #222;
     color: white;
@@ -96,15 +103,25 @@ footer {
     font-size: 1.1em;
 }
 
+/* Project Section - Make it Bigger */
+#projects {
+    width: 90%; /* Increased from 80% to 90% */
+    max-width: 1200px; /* Set a maximum width for large screens */
+    padding: 80px 30px; /* Add more padding for better spacing */
+}
+
+/* Project Gallery */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
+/* Make Images Bigger */
 .gallery img {
-    width: 30%;
+    width: 45%; /* Increased from 30% to 45% */
+    max-width: 500px; /* Prevents images from being too large */
     border-radius: 10px;
     box-shadow: 0px 0px 5px grey;
     transition: transform 0.3s ease-in-out;
@@ -114,24 +131,9 @@ footer {
     transform: scale(1.1);
 }
 
-/* Light Mode */
-.light-mode {
-    background-color: #ffffff;
-    color: #121212;
-}
-
-.light-mode .hero {
-    background: linear-gradient(to right, #E4E5E6, #ffffff);
-}
-
-.light-mode nav {
-    background: #f8f9fa;
-}
-
-.light-mode section {
-    background: #f9f9f9;
-}
-
-.light-mode footer {
-    background: #f8f9fa;
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 80%; /* Make images larger on smaller screens */
+    }
 }
