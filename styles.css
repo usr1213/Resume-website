@@ -3,10 +3,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #333;
+    background-color: #900C3F;
     color: white;
     padding: 20px;
 }
@@ -14,7 +16,11 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    background: #444;
+    background: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul li {
@@ -28,7 +34,20 @@ nav ul li a {
 }
 
 section {
-    padding: 20px;
+    padding: 60px 20px;
+    background: white;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px grey;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
@@ -36,4 +55,16 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
 }
