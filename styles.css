@@ -6,6 +6,7 @@ body {
     color: white;
     text-align: center;
     scroll-behavior: smooth;
+    transition: background 0.3s, color 0.3s;
 }
 
 .hero {
@@ -15,22 +16,18 @@ body {
     text-align: center;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 15px;
+#theme-toggle {
+    margin-top: 10px;
     padding: 10px 20px;
     background: #ff5733;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background: #e74c3c;
 }
 
 nav {
@@ -115,4 +112,26 @@ footer {
 
 .gallery img:hover {
     transform: scale(1.1);
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.light-mode .hero {
+    background: linear-gradient(to right, #E4E5E6, #ffffff);
+}
+
+.light-mode nav {
+    background: #f8f9fa;
+}
+
+.light-mode section {
+    background: #f9f9f9;
+}
+
+.light-mode footer {
+    background: #f8f9fa;
 }
